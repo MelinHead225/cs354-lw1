@@ -11,9 +11,6 @@ layout: default
 
 ## Getting Started with Swift
 ## Popular IDE's/plug-ins
-``` I dont know if this changes anything```
- - here it goes
-
 ## Pragmatics
 ### Package Manager
 ### Inheritance
