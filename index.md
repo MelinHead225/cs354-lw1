@@ -2,7 +2,9 @@
 layout: default
 ---
 # Background
+Swift is a general-purpose, multi-paradigm, compiled programming language released in 2014 by Apple Inc.
 ## History of Swift
+Swift's developement originally began in 2010 by Chris Lattner. Swift was originally developed as a replacement for Apple's previous programming language Objective-C since it lacked modern features.  While developing Swift, Apple included the ability to interoperate with the previously existing Objective-C code from previous decades.  Swift uses the Objective-C runtime library which allows for C, C++, Objective-C, and Swift code to all run within one program.  Swift was developed with the intent to support the concept of 'protcol extensibility' which allows for the creation of structs and classes.  Initially released as a proprietary language is 2014 with the release of version 2.2 in 2015 Swift became open source under the Apache License 2.0.   
 ## Description
 ## Documentation/Manuals
 - a
