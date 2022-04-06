@@ -11,6 +11,33 @@ layout: default
 
 ## Getting Started with Swift
 ## Popular IDE's/plug-ins
+``` here
+Atom
+- open-source code editor
+- need to use a macOS or linux to run and compile code
+AppCode
+- smart IDE similar to eclipse and intelliJ with real time color and highlights as well as errors
+- only on macOS
+CLion
+- plugin
+- Available on windows, macOs, and linux
+CodeRunner
+- only on MacOS and linux
+- Syntax highlighting 
+- Out-of-the-box support
+SublimeText
+- plugin needs to be installed via Package Control
+- Available on windows, macOs, and linux
+VS Code
+- free and open source IDE
+- plugin
+- Available on windows, macOs, and linux
+Xcode
+- Recommended by Apple
+- Official Apple support
+- Pre-installed on Macs
+- only on macOS
+```
 ## Pragmatics
 ### Package Manager
 ### Inheritance
