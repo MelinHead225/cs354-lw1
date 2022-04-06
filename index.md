@@ -49,10 +49,10 @@ Xcode
 ## Example programs
 ### Example 1
 ```swift
-// Swift code with syntax highlighting.
-struct Animal {
-    let nickName : String?
-}
+// Swift empty array creation
+let thisArray1 = [Int]()
+let thisArray2 = [Int] = []
+let thisArray3 = [String]()
 ```
 ### Example 2
 ```swift
