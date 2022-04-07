@@ -162,10 +162,8 @@ Xcode
 - only on macOS
 ```
 ## Pragmatics
-### Package Manager
-### Inheritance
-### Operator Overloading
-### Libraries
+
+{% include_relative pragmatics.md %}
 
 ## Example programs
 ### Example 1
@@ -189,6 +187,10 @@ struct Animal {
     let nickName : String?
 }
 ```
+
+### Example 4
+
+{% include_relative example4.md %}
 
 
 
