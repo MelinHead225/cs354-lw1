@@ -12,6 +12,127 @@ Swift's developement originally began in 2010 by Chris Lattner. Swift was origin
 - c
 
 ## Getting Started with Swift
+
+### Installing swift
+Download the compiler and follow installation instructions for your given Operating System
+
+https://www.swift.org/download/
+
+Verify installation by running the following command
+
+```$ swift --version```
+
+<hr>
+
+### Running the REPL
+
+Running the following command without any other arguments will launch the REPL (Read, evaluate, Print, Loop):
+
+```$ swift```
+
+This interactive shell will allow you to input code into the swift interpreter and see the output directly on the command line.
+
+For example, writing a basic "Hello World!" using the built in print function would look like this:
+
+``` swift
+	1> print("Hello World!")
+Hello World!
+```
+
+<hr>
+
+### Basic Syntax
+
+#### Functions
+Functions are declared using the keyword "func" followed by the method name and any parameters the function may take. An example function header is shown below.
+
+```swift
+func myFunction(num: Int){
+	print("Your number is \(num)")
+}
+
+myFunction(num: 5)
+```
+
+```
+Output: Your number is 5
+```
+
+Functions may also have return types which are specified by an arrow operator and the data type directly following the function header. An example of a function header with a return type is shown below.
+
+```swift
+func myFunction(num: Int) -> Int{
+	return num + 10
+}
+var addedNum = myFunction(num: 5)
+print("Your number is \(addedNum)")
+```
+```
+Output: Your number is 15
+```
+
+
+
+#### Semicolons
+Semicolons are not required at the end of every line in Swift. However, like other languages, they will not interfere with how the code runs. 
+
+However, semicolons are necessary when including multiple statements on the same line. An example is shown below.
+```swift
+var x = 50; print(x)
+```
+#### Comments
+Swift allows single and multi-line comments.
+Single line comments are denoted by two slashes.
+```swift
+//This is a comment
+```
+
+Multi-line comments are denoted by a slash and asterisk.
+```swift
+/*This is a 
+Multi-line comment */
+```
+<hr>
+
+### Introduction to Variables
+#### Variable Declaration
+Declaring and initializing a variable follows the following format:
+
+```swift
+var varName = value
+```
+
+Example:
+```swift
+var hello = "Hello!"
+```
+<br/>
+
+#### Type Annotation
+Swift infers the data type of variables when not specifically stated. However, when you want to declare a variable that can only store a certain data type, you can use type annotation.
+
+Type annotation syntax is as follows:
+
+```swift
+var varName:dataType = optionalValue
+```
+
+```swift
+var hello:String = "Hello!"
+```
+<br/>
+
+#### Printing Variables
+The print function of Swift allows variables to be inserted into string using an escape character. Surrounding a variable in parenthesis and preceding it with a backslash allows the value of the variable to be inserted into the string.
+
+Example:
+
+```swift
+	var x = 50
+	print("There are \(x) people here!")
+There are 50 people here!
+```
+
 ## Popular IDE's/plug-ins
 ``` here
 Atom
