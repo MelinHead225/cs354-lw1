@@ -174,11 +174,34 @@ let thisArray1 = [Int]()
 let thisArray2 = [Int] = []
 let thisArray3 = [String]()
 ```
-### Example 2
+### Example 2 - Higher or Lower Game
 ```swift
-// Swift code with syntax highlighting.
-struct Animal {
-    let nickName : String?
+func higherOrLower(){
+    let num = Int.random(in: 1...10)
+
+    print("Guess a number between 1 and 10: ")
+
+    var guess = 0
+    while(guess != num){
+        let input = readLine()
+        guess = Int(input!) ?? 0
+
+        if(guess < num){
+            print("Incorrect, guess higher!")
+        }
+        if(guess > num){
+            print("Incorrect, guess lower!")
+        }
+    }
+
+    print("Correct!")
+}
+
+var play = "y"
+while(play == "y"){
+    higherOrLower()
+    print("Play again? y/n")
+    play = readLine() ?? "no"
 }
 ```
 ### Example 3
