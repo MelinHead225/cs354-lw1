@@ -167,12 +167,26 @@ Xcode
 {% include_relative pragmatics.md %}
 
 ## Example programs
-### Example 1
+### Example 1 - Heads or Tails Game
 ```swift
-// Swift empty array creation
-let thisArray1 = [Int]()
-let thisArray2 = [Int] = []
-let thisArray3 = [String]()
+//function declaration
+func headOrTail() {
+  let rand = Int.random(in:1...2)  //retrieving random #
+  print("About to flip the coin!")
+
+  //if the random number was 1
+  if(rand == 1) {
+    print("Landed on Heads!")
+  }
+  //if the random number was 2
+  if(rand == 2) {
+    print("Landed on Tails!")
+  }
+}
+
+//calling the function
+print(headOrTail())
+
 ```
 ### Example 2 - Higher or Lower Game
 ```swift
