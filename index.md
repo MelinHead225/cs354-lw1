@@ -191,15 +191,22 @@ print(headOrTail())
 ### Example 2 - Higher or Lower Game
 ```swift
 func higherOrLower(){
+    //Get a random number between 1 and 10 for the user to guess
     let num = Int.random(in: 1...10)
 
     print("Guess a number between 1 and 10: ")
 
     var guess = 0
+    
+    //Keep the user guessing until they get the right number
     while(guess != num){
         let input = readLine()
+	
+	/*Change the String? type read by the readLine function into an integer
+	to compare it to num */
         guess = Int(input!) ?? 0
-
+	
+	//Print whether their guess was higher or lower than num
         if(guess < num){
             print("Incorrect, guess higher!")
         }
@@ -212,9 +219,12 @@ func higherOrLower(){
 }
 
 var play = "y"
+//While loop lets the user play as many times as they want
 while(play == "y"){
     higherOrLower()
     print("Play again? y/n")
+    
+    //Read input from the user, if input can't be parsed set the default to "no"
     play = readLine() ?? "no"
 }
 ```
