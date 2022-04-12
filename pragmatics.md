@@ -123,4 +123,4 @@ These core libraries are open source and use as much implementation as is possib
 
 More information can be found in the [Core Libraries section of the Swift Docs](https://www.swift.org/core-libraries/).
 
-The Standard and Core Libraries give Swift very powerful out of the box.
+The Standard and Core Libraries make Swift very powerful out of the box.
