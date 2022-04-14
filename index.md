@@ -8,9 +8,9 @@ Swift's developement originally began in 2010 by Chris Lattner. Swift was origin
 ## Description
 Swift is a language released by Apple in 2014. Since it was meant as a replacement for Apple’s previous language, it needed to incorporate many core concepts associated with Objective-C including dynamic dispatch, widespread late binding, extensible programing, and similar features. Their goal was to make these features “safer” and more easily catch bugs. Swift also claims to be friendly to new programmers making it a good choice for teaching children.
 ## Documentation/Manuals
-- [The Swift Programming Language](https://www.swift.org/documentation/) - The authoritative reference for Swift, offering a guided tour, a comprehensive guide, and a formal reference of the language.
-- [Getting Started](https://www.swift.org/getting-started/) - Swift's own 'Getting Started' guide.
-- [The Official Swift Community](https://www.swift.org/) -  Swift community working to "build a programming language to empower everyone to turn their ideas into apps on any platform".
+- a
+- b
+- c
 
 ## Getting Started with Swift
 
@@ -123,6 +123,31 @@ var hello:String = "Hello!"
 ```
 <br/>
 
+#### Swift Optional
+
+Optionals are a variable/constant that can either contain a value or nil. 
+Optional variables are denoted by adding a '?' symbol after the data type declaration.
+
+Declaring an optional is shown below
+```swift
+var x:String? = "Howdy"
+```
+
+These don't replace data types, but instead act as a wrapper around normal data types that provide the ability for them to be nil. 
+Because of this added functionality, optionals and normal variables can't interact with each other without being "unwrapped" first. 
+Unwrapping an optional is denoted by adding a '!' symbol after the variable name.
+
+Unwrapping an optional is shown below
+```swift
+print(x!)
+```
+Output:
+```swift
+Howdy
+```
+
+<br/>
+
 #### Printing Variables
 The print function of Swift allows variables to be inserted into string using an escape character. Surrounding a variable in parenthesis and preceding it with a backslash allows the value of the variable to be inserted into the string.
 
@@ -167,27 +192,66 @@ Xcode
 {% include_relative pragmatics.md %}
 
 ## Example programs
-### Example 1
+### Example 1 - Heads or Tails Game
 ```swift
-// Swift empty array creation
-let thisArray1 = [Int]()
-let thisArray2 = [Int] = []
-let thisArray3 = [String]()
+//function declaration
+func headOrTail() {
+  let rand = Int.random(in:1...2)  //retrieving random #
+  print("About to flip the coin!")
+
+  //if the random number was 1
+  if(rand == 1) {
+    print("Landed on Heads!")
+  }
+  //if the random number was 2
+  if(rand == 2) {
+    print("Landed on Tails!")
+  }
+}
+
+//calling the function
+print(headOrTail())
+
 ```
-### Example 2
+### Example 2 - Higher or Lower Game
 ```swift
-// Bitwise XOR
-var a = 12
-var  b = 25
+func higherOrLower(){
+    //Get a random number between 1 and 10 for the user to guess
+    let num = Int.random(in: 1...10)
 
-var result = a ^ b
-print(result)    // 21
+    print("Guess a number between 1 and 10: ")
 
-// Left Shift Operator
-a = 3
-result = a << 2
+    var guess = 0
+    
+    //Keep the user guessing until they get the right number
+    while(guess != num){
+        let input = readLine()
+	
+	/*Change the String? type read by the readLine function into an integer
+	to compare it to num */
+        guess = Int(input!) ?? 0
+	
+	//Print whether their guess was higher or lower than num
+        if(guess < num){
+            print("Incorrect, guess higher!")
+        }
+        if(guess > num){
+            print("Incorrect, guess lower!")
+        }
+    }
 
-print(result)    // 12
+    print("Correct!")
+}
+
+var play = "y"
+//While loop lets the user play as many times as they want
+while(play == "y"){
+    higherOrLower()
+    print("Play again? y/n")
+    
+    //Read input from the user, if input can't be parsed set the default to "no"
+    play = readLine() ?? "no"
+}
 ```
 ### Example 3
 ```swift
@@ -200,3 +264,123 @@ struct Animal {
 ### Example 4
 
 {% include_relative example4.md %}
+
+
+
+
+
+
+
+# EXAMPLE MARKDOWN BELOW
+
+Text can be **bold**, _italic_, or ~~strikethrough~~.
+
+[Link to another page](./another-page.html).
+
+There should be whitespace between paragraphs.
+
+There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+
+# Header 1
+
+This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+
+## Header 2
+
+> This is a blockquote following a header.
+>
+> When something is important enough, you do it even if the odds are not in your favor.
+
+### Header 3
+
+```swift
+// Swift code with syntax highlighting.
+struct Animal {
+    let nickName : String?
+}
+```
+
+#### Header 4
+
+*   This is an unordered list following a header.
+*   This is an unordered list following a header.
+*   This is an unordered list following a header.
+
+##### Header 5
+
+1.  This is an ordered list following a header.
+2.  This is an ordered list following a header.
+3.  This is an ordered list following a header.
+
+###### Header 6
+
+| head1        | head two          | three |
+|:-------------|:------------------|:------|
+| ok           | good swedish fish | nice  |
+| out of stock | good and plenty   | nice  |
+| ok           | good `oreos`      | hmm   |
+| ok           | good `zoute` drop | yumm  |
+
+### There's a horizontal rule below this.
+
+* * *
+
+### Here is an unordered list:
+
+*   Item foo
+*   Item bar
+*   Item baz
+*   Item zip
+
+### And an ordered list:
+
+1.  Item one
+1.  Item two
+1.  Item three
+1.  Item four
+
+### And a nested list:
+
+- level 1 item
+  - level 2 item
+  - level 2 item
+    - level 3 item
+    - level 3 item
+- level 1 item
+  - level 2 item
+  - level 2 item
+  - level 2 item
+- level 1 item
+  - level 2 item
+  - level 2 item
+- level 1 item
+
+### Small image
+
+![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
+
+### Large image
+
+![Branching](https://guides.github.com/activities/hello-world/branching.png)
+
+
+### Definition lists can be used with HTML syntax.
+
+<dl>
+<dt>Name</dt>
+<dd>Godzilla</dd>
+<dt>Born</dt>
+<dd>1952</dd>
+<dt>Birthplace</dt>
+<dd>Japan</dd>
+<dt>Color</dt>
+<dd>Green</dd>
+</dl>
+
+```
+Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
+```
+
+```
+The final element.
+```
