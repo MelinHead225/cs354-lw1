@@ -123,6 +123,31 @@ var hello:String = "Hello!"
 ```
 <br/>
 
+#### Swift Optional
+
+Optionals are a variable/constant that can either contain a value or nil. 
+Optional variables are denoted by adding a '?' symbol after the data type declaration.
+
+Declaring an optional is shown below
+```swift
+var x:String? = "Howdy"
+```
+
+These don't replace data types, but instead act as a wrapper around normal data types that provide the ability for them to be nil. 
+Because of this added functionality, optionals and normal variables can't interact with each other without being "unwrapped" first. 
+Unwrapping an optional is denoted by adding a '!' symbol after the variable name.
+
+Unwrapping an optional is shown below
+```swift
+print(x!)
+```
+Output:
+```swift
+Howdy
+```
+
+<br/>
+
 #### Printing Variables
 The print function of Swift allows variables to be inserted into string using an escape character. Surrounding a variable in parenthesis and preceding it with a backslash allows the value of the variable to be inserted into the string.
 
