@@ -1,7 +1,7 @@
 import XCTest
 
-import lw2Tests
+import BankingTests
 
 var tests = [XCTestCaseEntry]()
-tests += lw2Tests.allTests()
+tests += BankingTests.allTests()
 XCTMain(tests)
