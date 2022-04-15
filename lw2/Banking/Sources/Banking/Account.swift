@@ -2,12 +2,17 @@
 //  Account.swift
 //
 //
-//  @author
+//  @author Mateo
 //
 
 import Foundation
 
 
+class Account{
+    var number = ""
+    var customer = Customer()
+    var balance = 0
+}
 
 
 
