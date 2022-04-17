@@ -3,24 +3,42 @@
 //
 //
 //  @author Mateo
+//  @author Connor Espino
 //
 
 import Foundation
 
+protocol Account{
+    //Declare variables
+    var number: String
+    var customer: Customer()
+    var balance: Double
 
-class Account{
-    var number = ""
-    var customer = Customer()
-    var balance = 0
+    //Declare required method for child classes to implement
+    func accrue(rate: Double)
 }
 
+//Implement some methods that are handled by Account class
+extension Account{
+    func balance() -> Double{
+        return balance
+    }
 
+    func deposit(amount: Double){
+        balance += amount
+    }
 
+    func withdraw(amount: Double){
+        balance -= amount
+    }
 
+    //toString method returns a string
+    func toString() -> String{
+        return "\(number):\(customer.toString()):\(balance)"
+    }
+}
 
-
-
-// The Java class. Delete when done
+// The Java class.
 //public abstract class Account {
 //
 //    protected String number;
