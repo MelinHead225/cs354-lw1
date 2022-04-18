@@ -16,9 +16,9 @@ class Account : AccountProtocol {
     
     // In Swift, you cannot name a variable and a function the same thing if no parameters are passed.
     // Because we want to name a method "balance", we'll change our private variable "balance" to "bal"
-    private var number: String
-    private var customer: Customer
-    private var bal: Double
+    var number: String
+    var customer: Customer
+    var bal: Double
     
     init(number: String, customer: Customer, balance: Double) {
         // Similar to Python, you reference the class with "self" instead of "this"
@@ -26,6 +26,8 @@ class Account : AccountProtocol {
         self.customer = customer
         self.bal = balance
     }
+
+    func accrue(rate: Double){ }
     
     func balance() -> Double {
         return bal
@@ -38,9 +40,20 @@ class Account : AccountProtocol {
     func withdraw(amount: Double) {
         bal -= amount
     }
+}
 
-    //toString method returns a string
-    func toString() -> String {
-        return "\(number):\(customer.toString()):\(bal)"
+extension Account: CustomStringConvertible {
+    var description: String {
+        return "\(number) : \(customer) : \(bal)"
+    }
+}
+
+extension Account: Hashable {
+    static func == (lhs: Account, rhs: Account) -> Bool {
+        return lhs.number == rhs.number
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(number)
     }
 }

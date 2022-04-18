@@ -8,39 +8,26 @@
 import Foundation
 
 class Bank {
+    //Declare variables
+    private var accounts = Set<Account>()
+    func add(account: Account) {
+        accounts.insert(account)
+    }
 
-    
-    
-    
+    func accrue(rate: Double) {
+        for account in accounts {
+            account.accrue(rate: rate);
+        }
+    }
+}
+extension Bank: CustomStringConvertible {
+    var description: String {
+        var print = ""
+        for account in accounts {
+            print.append((String(describing:account)))
+            print.append("\n")
+        }
+        return print
+    }
 }
 
-
-
-
-
-
-
-
-
-// The Java class. Delete when done
-//public class Bank {
-//
-//    private Set<Account> accounts=new HashSet<Account>();
-//
-//    public void add(Account account) {
-//        accounts.add(account);
-//    }
-//
-//    public void accrue(double rate) {
-//        for (Account account: accounts)
-//            account.accrue(rate);
-//    }
-//
-//    public String toString() {
-//        String r="";
-//        for (Account account: accounts)
-//            r+=account+"\n";
-//        return r;
-//    }
-//
-//}

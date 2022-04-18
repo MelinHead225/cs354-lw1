@@ -9,11 +9,13 @@ import Foundation
 
 
 class CheckingAccount: Account, SubAccountProtocol {
+    var interest = 0.0;
 
-    func accrue(rate: Double) {
-        print("I don't accrue anything yet")
+    func SavingAccount(number: String , customer:  Customer , bal: Double) {
+        self.number = number;
+        self.customer = customer;
+        self.bal = bal;
     }
-    
 }
 
 

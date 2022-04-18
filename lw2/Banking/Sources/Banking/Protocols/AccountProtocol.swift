@@ -22,5 +22,4 @@ protocol AccountProtocol {
     func balance() -> Double
     func deposit(amount: Double)
     func withdraw(amount: Double)
-    func toString() -> String
 }

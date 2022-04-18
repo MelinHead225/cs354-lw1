@@ -2,39 +2,23 @@
 //  SavingAccount.swift
 //
 //
-//  @author
+//  @author Mateo Ortegon
 //
 
 import Foundation
 
 
 class SavingAccount: Account, SubAccountProtocol {
+    var interest = 0.0;
 
-    func accrue(rate: Double) {
-        print("I don't accrue anything yet")
+    func SavingAccount(number: String , customer:  Customer , bal: Double) {
+        self.number = number;
+        self.customer = customer;
+        self.bal = bal;
     }
-    
+
+    override func accrue(rate: Double) {
+        self.interest = self.interest + self.bal * rate;
+        self.bal = self.bal + self.bal * rate;
+    }
 }
-
-
-
-
-
-
-// The Java class. Delete when done
-//public class SavingAccount extends Account {
-//
-//    private double interest=0;
-//
-//    public SavingAccount(String number, Customer customer, double balance) {
-//        this.number=number;
-//        this.customer=customer;
-//        this.balance=balance;
-//    }
-//
-//    public void accrue(double rate) {
-//        interest= interest + balance*rate;
-//        balance= balance + balance*rate;
-//    }
-//
-//}

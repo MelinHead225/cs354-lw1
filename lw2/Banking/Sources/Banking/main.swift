@@ -6,11 +6,15 @@
 //
 
 
-
-print("Hello, world!")
-
 var bank = Bank()
-var customer = Customer(name: "Ann")
+var c = Customer(name: "Ann")
+bank.add(account: CheckingAccount(number:"01001",customer: c,balance: 100.00))
+bank.add(account: SavingAccount(number:"01002",customer: c,balance: 200.00))
+print(bank)
+bank.accrue(rate: 0.02);
+print(bank)
+
+
 // Uncomment when other classes are finished.
 //bank.add(CheckingAccount(number: "01001", customer: customer, balance: 100.00))
 //bank.add(SavingAccount(number: "01002", customer: customer, balance: 200.00))
