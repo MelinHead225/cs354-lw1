@@ -3,13 +3,16 @@
 //
 //
 //  @author Nick Adams
+//  @author Eric Melin
 //
 
 
 var bank = Bank()
 var c = Customer(name: "Ann")
+var j = Customer(name: "Joey")  //Youth Member
 bank.add(account: CheckingAccount(number:"01001",customer: c,balance: 100.00))
 bank.add(account: SavingAccount(number:"01002",customer: c,balance: 200.00))
+bank.add(account: YouthAccount(number:"01003",customer: j,balance 25.00))
 print(bank)
 bank.accrue(rate: 0.02);
 print(bank)
