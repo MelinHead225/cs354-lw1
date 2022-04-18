@@ -19,8 +19,9 @@ class YouthAccount: Account SubAccountProtocol {
        self.bal = bal
     }
     
-    override func accrue() {
-        self.interest = self.interest + (self.bal * 0.049);
-        self.bal = self.bal + (self.bal * 0.049);
+    override func accrue(rate: Double) {
+        rate = 0.049;
+        self.interest = self.interest + (self.bal * rate);
+        self.bal = self.bal + (self.bal * rate);
     }
 }
