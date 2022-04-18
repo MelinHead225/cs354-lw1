@@ -8,17 +8,11 @@
 import Foundation
 
 
-class SavingAccount: Account, SubAccountProtocol {
-    var interest = 0.0;
-
-    func SavingAccount(number: String , customer:  Customer , bal: Double) {
-        self.number = number;
-        self.customer = customer;
-        self.bal = bal;
-    }
+class SavingAccount: Account {
 
     override func accrue(rate: Double) {
         self.interest = self.interest + self.bal * rate;
         self.bal = self.bal + self.bal * rate;
     }
+    
 }

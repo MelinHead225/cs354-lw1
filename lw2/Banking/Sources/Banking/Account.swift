@@ -19,6 +19,7 @@ class Account : AccountProtocol {
     var number: String
     var customer: Customer
     var bal: Double
+    var interest: Double = 0.0
     
     init(number: String, customer: Customer, balance: Double) {
         // Similar to Python, you reference the class with "self" instead of "this"

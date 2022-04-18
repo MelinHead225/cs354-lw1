@@ -14,3 +14,8 @@ and execute the program with
 swift run
 ```
 
+If you are running into issues compiling after pulliing in someone's latest changes, try cleaning the package before compiling.
+
+```bash
+swift package clean
+```
