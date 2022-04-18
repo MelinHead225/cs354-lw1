@@ -8,7 +8,13 @@
 import Foundation
 
 
+class CheckingAccount: Account, SubAccountProtocol {
 
+    func accrue(rate: Double) {
+        print("I don't accrue anything yet")
+    }
+    
+}
 
 
 
