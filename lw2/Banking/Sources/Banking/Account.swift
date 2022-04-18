@@ -2,7 +2,7 @@
 //  Account.swift
 //
 //
-//  @author Mateo
+//  @author Mateo Ortegon
 //  @author Connor Espino
 //  @author Nick Adams
 //
