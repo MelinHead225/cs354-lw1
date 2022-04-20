@@ -18,7 +18,6 @@ import Foundation
 // public methods only.
 // We can use the Account class itself to provide these variables instead.
 protocol AccountProtocol {
-    //Declare variables
     func balance() -> Double
     func deposit(amount: Double)
     func withdraw(amount: Double)
