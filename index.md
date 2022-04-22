@@ -213,7 +213,48 @@ func headOrTail() {
 print(headOrTail())
 
 ```
-### Example 2 - Higher or Lower Game
+### Example 2 - Rock, Paper, Scissors
+```swift
+print("(1) Rock, (2) Paper, or (3) Scissors?")
+
+//Read user input for player's move
+let response = readLine()
+var playerChoice = Int(response!) ?? 0
+
+//Generate random number for opponent's choice
+let oppChoice = Int.random(in: 1...3)
+
+//Switch statement to print out opponent's choice
+switch(oppChoice){
+    case 1:
+        print("Opponent's choice: Rock")
+        break
+    case 2:
+        print("Opponent's choice: Paper")
+        break
+    case 3:
+        print("Opponent's choice: Scissors")
+        break
+    default:
+        break
+}
+
+//Determine winner
+if((oppChoice == 1 && playerChoice == 2) || (oppChoice == 2 && playerChoice == 3) || (oppChoice == 3 && playerChoice == 1)){
+    print("You win!")
+}
+else if((playerChoice == 1 && oppChoice == 2) || (playerChoice == 2 && oppChoice == 3) || (playerChoice == 3 && oppChoice == 1)){
+    print("You lose!")
+}
+else if(playerChoice == oppChoice){
+    print("Tie game!")
+}
+else{
+    print("Unknown Option, no winner")
+}
+```
+
+### Example 3 - Higher or Lower Game
 ```swift
 func higherOrLower(){
     //Get a random number between 1 and 10 for the user to guess
@@ -253,7 +294,7 @@ while(play == "y"){
     play = readLine() ?? "no"
 }
 ```
-### Example 3
+### Example 4
 ```swift
 // Swift code with syntax highlighting.
 struct Animal {
@@ -261,7 +302,7 @@ struct Animal {
 }
 ```
 
-### Example 4
+### Example 5
 
 {% include_relative example4.md %}
 
