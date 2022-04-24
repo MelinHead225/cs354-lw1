@@ -194,6 +194,7 @@ Xcode
 ## Example programs
 ### Example 1 - Heads or Tails Game
 ```swift
+//Author: Eric Melin
 //function declaration
 func headOrTail() {
   let rand = Int.random(in:1...2)  //retrieving random #
@@ -212,8 +213,22 @@ func headOrTail() {
 //calling the function
 print(headOrTail())
 
+
+### Example 2 - Convert Minutes to Hours + Minutes
+```swift
+//Author: Eric Melin
+//function declaration
+func minutesToHoursAndMinutes(_ minutes: Int) -> (hours: Int, remaindingMinutes: Int) {
+    return (minutes / 60, (minutes % 60))
+}
+
+let retVal = minutesToHoursAndMinutes(140)
+
+print(retVal) //(hours: 2, remaindingMinutes: 20)
+
+
 ```
-### Example 2 - Rock, Paper, Scissors
+### Example 3 - Rock, Paper, Scissors
 ```swift
 print("(1) Rock, (2) Paper, or (3) Scissors?")
 
@@ -254,7 +269,7 @@ else{
 }
 ```
 
-### Example 3 - Higher or Lower Game
+### Example 4 - Higher or Lower Game
 ```swift
 func higherOrLower(){
     //Get a random number between 1 and 10 for the user to guess
@@ -294,7 +309,7 @@ while(play == "y"){
     play = readLine() ?? "no"
 }
 ```
-### Example 4
+### Example 5
 ```swift
 // Swift code with syntax highlighting.
 struct Animal {
@@ -302,7 +317,7 @@ struct Animal {
 }
 ```
 
-### Example 5
+### Example 6
 
 {% include_relative example4.md %}
 
