@@ -213,7 +213,7 @@ func headOrTail() {
 //calling the function
 print(headOrTail())
 
-
+```
 ### Example 2 - Convert Minutes to Hours + Minutes
 ```swift
 //Author: Eric Melin
