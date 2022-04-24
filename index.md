@@ -211,7 +211,7 @@ func headOrTail() {
 }
 
 //calling the function
-print(headOrTail())
+print(headOrTail()) //"Landed on Heads!" or "Landed on Tails!"
 
 ```
 ### Example 2 - Convert Minutes to Hours + Minutes
